@@ -44,8 +44,9 @@
             echo "<td>" . $row["email"] . "</td>";
             echo "<td>" . $row["phone"] . "</td>";
             echo "<td>";
-            echo "<button class='button' onclick='editContact(this, " . $row["id"] . ")'><img src='edit-icon.png' alt='Edit' class='button-icon'>Editar</button>";
-            echo "<button class='button' onclick='deleteContact(" . $row["id"] . ")'><img src='delete-icon.png' alt='Delete' class='button-icon'>Excluir</button>";
+            echo "<button class='button' onclick='editContact(this, " . $row["id"] . ")'><img src='editar.png' alt='Edit' class='button-icon' style='width: 100px; height: 100px;'></button>";
+echo "<button class='button' onclick='deleteContact(" . $row["id"] . ")'><img src='cruz.png' alt='Delete' class='button-icon' style='width: 100px; height: 100px;'></button>";
+
             echo "</td>";
             echo "</tr>";
           }
@@ -103,16 +104,16 @@
   ?>
 
   <div class="phone-container">
-    <div class="phone-header">Agenda Telefônica</div>
+    <div class="phone-header" style="font-size:125px">Agenda Telefônica</div>
     <div class="phone-content">
       <form id="contactForm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-        <label for="name">Nome:</label>
-        <input type="text" id="name" name="name" required><br>
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required><br>
-        <label for="phone">Telefone:</label>
-        <input type="text" id="phone" name="phone" required><br>
-        <button type="submit" class="button"><img src="save-icon.png" alt="Save" class="button-icon">Salvar</button>
+        <label for="name" style="font-size:75px">Nome:</label>
+        <input style="width:600px;height:50px" type="text" id="name" name="name" required><br> <br>
+        <label for="email" style="font-size:75px">E-mail:</label>
+        <input style="width:600px;height:50px" type="email" id="email" name="email" required><br> <br> 
+        <label for="phone" style="font-size:75px">Telefone:</label>
+        <input style="width:600px;height:50px" type="text" id="phone" name="phone" required><br> <br> 
+        <button type="submit" class="button"><img src="adicionar-usuario.png" alt="Save" class="button-icon" style=" width:200px"></button>
       </form>
     </div>
   </div>
